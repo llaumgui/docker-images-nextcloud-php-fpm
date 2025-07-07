@@ -8,6 +8,9 @@ env:
   GHCR_REGISTRY: ghcr.io
   IMAGE_NAME: llaumgui/nextcloud-php
   LATEST: '8.4'
+permissions:
+  security-events: write
+  packages: write
 
 jobs:
   ##############################################################################

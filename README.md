@@ -1,4 +1,4 @@
-# php-FPM Docker images
+# Nextcloud php-FPM Docker images
 
 [![Author][ico-bluesky]][link-bluesky]
 [![Build Status][ico-ghactions]][link-ghactions]
@@ -17,22 +17,22 @@ Available for:
 Usage:
 
 ```bash
-docker pull llaumgui/nextcloud-php:8.4
+docker pull llaumgui/nextcloud-php:8.4-fpm
 ```
 
 or:
 
 ```bash
-docker pull ghcr.io/llaumgui/nextcloud-php:8.4
+docker pull ghcr.io/llaumgui/nextcloud-php:8.4-fpm
 ```
 
-And see [documentation](https://github.com/llaumgui/docker-images-php-fpm/tree/main/8.4-nextcloud).
+And see [documentation](https://github.com/llaumgui/docker-images-nextcloud-php-fpm/tree/main/8.4).
 
 [ico-bluesky]: https://img.shields.io/static/v1?label=Author&message=llaumgui&color=208bfe&logo=bluesky&style=flat-square
 [link-bluesky]: https://bsky.app/profile/llaumgui.kulakowski.fr
-[ico-docker]: https://img.shields.io/docker/pulls/llaumgui/php?color=%2496ed&logo=docker&style=flat-square
-[link-docker]: https://hub.docker.com/r/llaumgui/php
-[ico-ghactions]: https://img.shields.io/github/actions/workflow/status/llaumgui/docker-images-php-fpm/devops.yml?label=DevOps&logo=github&style=flat-square
-[link-ghactions]: https://github.com/llaumgui/docker-images-php-fpm/actions
-[ico-version]: https://img.shields.io/docker/v/llaumgui/php?sort=semver&color=%2496ed&logo=docker&style=flat-square
-[ico-license]: https://img.shields.io/github/license/llaumgui/docker-images-php-fpm?style=flat-square
+[ico-docker]: https://img.shields.io/docker/pulls/llaumgui/nextcloud-php?color=%2496ed&logo=docker&style=flat-square
+[link-docker]: https://hub.docker.com/r/llaumgui/nextcloud-php
+[ico-ghactions]: https://img.shields.io/github/actions/workflow/status/llaumgui/docker-images-nextcloud-php-fpm/devops.yml?label=DevOps&logo=github&style=flat-square
+[link-ghactions]: https://github.com/llaumgui/docker-images-nextcloud-php-fpm/actions
+[ico-version]: https://img.shields.io/docker/v/llaumgui/nextcloud-php?sort=semver&color=%2496ed&logo=docker&style=flat-square
+[ico-license]: https://img.shields.io/github/license/llaumgui/docker-images-nextcloud-php-fpm?style=flat-square
