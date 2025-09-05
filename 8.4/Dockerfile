@@ -1,7 +1,7 @@
 # My php-fpm image, based on debian Linux, configured and forked from the
 # official Nextcloud docker repository.
 # @see: https://github.com/nextcloud/docker/blob/09fecda4067434c11f955cdd3000ed950fe48d04/27/fpm/Dockerfile
-FROM php:8.4-fpm
+FROM php:8.4-fpm-trixie
 
 
 # -------------------------------------------- Set environment and ARG variables
@@ -17,7 +17,7 @@ ENV \
     S6_VERBOSITY=2
 ARG \
     # Set version for s6 overlay \
-    ARG S6_OVERLAY_VERSION="3.2.0.2" \
+    ARG S6_OVERLAY_VERSION="3.2.1.0" \
     ARG S6_OVERLAY_ARCH="x86_64"
 
 
@@ -68,11 +68,11 @@ RUN set -eux; \
         imagemagick \
         libfcgi-bin \
         libldap-common \
-        libmagickwand-6.q16-6 \
-        libmagickcore-6.q16-6-extra \
+        libmagickwand-7.q16-10 \
+        libmagickcore-7.q16-10-extra \
         libpng16-16 \
         libpq5 \
-        libzip4 \
+        libzip5 \
         nodejs \
         npm \
         openssl \
