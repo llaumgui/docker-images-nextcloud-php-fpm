@@ -1,7 +1,7 @@
 # My php-fpm image, based on debian Linux, configured and forked from the
 # official Nextcloud docker repository.
 # @see: https://github.com/nextcloud/docker/blob/09fecda4067434c11f955cdd3000ed950fe48d04/27/fpm/Dockerfile
-FROM php:8.4-fpm-trixie
+FROM php:8.5-fpm-trixie
 
 
 # -------------------------------------------- Set environment and ARG variables
