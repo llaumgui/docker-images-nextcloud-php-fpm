@@ -148,19 +148,7 @@ RUN php -m; \
 RUN php -m; \
     pecl install apcu; \
     pecl install igbinary; \
-    #pecl install imagick; \
-    # Tempory workaround - BEGIN \
-    git clone https://github.com/Imagick/imagick.git --depth 1 /tmp/imagick; \
-    cd /tmp/imagick || exit; \
-    git fetch origin master; \
-    git switch master; \
-    cd /tmp/imagick || exit; \
-    sed -i 's/php_strtolower/zend_str_tolower/g' imagick.c; \
-    phpize; \
-    ./configure; \
-    make; \
-    make install; \
-    # Tempory workaround - END \
+    pecl install imagick; \
     pecl install redis \
         --configureoptions 'enable-redis-igbinary="yes" enable-redis-zstd="yes" enable-redis-lz4="yes"'; \
     docker-php-ext-enable \
