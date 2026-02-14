@@ -12,7 +12,33 @@ Repository with my php-fpm Dockerfile for my Docker/Podman images.
 
 Available for:
 
+* PHP 8.5
 * PHP 8.4
+
+[System requirements](https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html) for Nexcloud in the official documentation:
+
+* 8.2 (deprecated)
+* 8.3
+* 8.4 (recommended)
+* 8.5
+
+## PHP 8.5
+
+Usage:
+
+```bash
+docker pull llaumgui/nextcloud-php:8.5-fpm
+```
+
+or:
+
+```bash
+docker pull ghcr.io/llaumgui/nextcloud-php:8.5-fpm
+```
+
+And see [documentation](https://github.com/llaumgui/docker-images-nextcloud-php-fpm/tree/main/8.5).
+
+## PHP 8.4
 
 Usage:
 
