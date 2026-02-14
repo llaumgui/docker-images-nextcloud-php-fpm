@@ -17,7 +17,7 @@ ENV \
     S6_VERBOSITY=2
 ARG \
     # Set version for s6 overlay \
-    ARG S6_OVERLAY_VERSION="3.2.1.0" \
+    ARG S6_OVERLAY_VERSION="3.2.2.0" \
     ARG S6_OVERLAY_ARCH="x86_64"
 
 
