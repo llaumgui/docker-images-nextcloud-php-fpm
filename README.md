@@ -24,6 +24,8 @@ Available for:
 
 ## PHP 8.5
 
+Work only from Nextcloud 33.
+
 Usage:
 
 ```bash
