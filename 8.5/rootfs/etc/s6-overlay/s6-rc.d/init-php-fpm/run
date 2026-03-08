@@ -12,31 +12,31 @@ CONF_PHP_FPM_DIR="/usr/local/etc/php-fpm.d/"
 
 # Make sure custom init directory exists and has files in it
 if [[ -e "${CUSTOM_CONF_PHP_DIR}" ]] && [[ -n "$(/bin/ls -A ${CUSTOM_CONF_PHP_DIR} 2>/dev/null)" ]]; then
-    echo "[custom-conf-init] Custom php config found, copy..."
+    echo "[init-php-fpm] Custom php config found, copy..."
     for CONF in "${CUSTOM_CONF_PHP_DIR}"/*; do
         NAME="$(basename "${CONF}")"
         if [[ -f "${CONF}" ]]; then
             echo "[custom-conf-ps aux] ${NAME}: copied to ${CONF_PHP_DIR}"
             cp "${CONF}" ${CONF_PHP_DIR}
         elif [[ ! -f "${CONF}" ]]; then
-            echo "[custom-conf-init] ${NAME}: is not a file"
+            echo "[init-php-fpm] ${NAME}: is not a file"
         fi
     done
 else
-    echo "[custom-conf-init] No custom php config found, skipping..."
+    echo "[init-php-fpm] No custom php config found, skipping..."
 fi
 
 if [[ -e "${CUSTOM_CONF_PHP_FPM_DIR}" ]] && [[ -n "$(/bin/ls -A ${CUSTOM_CONF_PHP_FPM_DIR} 2>/dev/null)" ]]; then
-    echo "[custom-conf-init] Custom php-fpm config found, copy..."
+    echo "[init-php-fpm] Custom php-fpm config found, copy..."
     for CONF in "${CUSTOM_CONF_PHP_FPM_DIR}"/*; do
         NAME="$(basename "${CONF}")"
         if [[ -f "${CONF}" ]]; then
-            echo "[custom-conf-init] ${NAME}: copied to ${CONF_PHP_DIR}"
+            echo "[init-php-fpm] ${NAME}: copied to ${CONF_PHP_DIR}"
             cp "${CONF}" ${CONF_PHP_FPM_DIR}
         elif [[ ! -f "${CONF}" ]]; then
-            echo "[custom-conf-init] ${NAME}: is not a file"
+            echo "[init-php-fpm] ${NAME}: is not a file"
         fi
     done
 else
-    echo "[custom-conf-init] No custom php-fpm config found, skipping..."
+    echo "[init-php-fpm] No custom php-fpm config found, skipping..."
 fi

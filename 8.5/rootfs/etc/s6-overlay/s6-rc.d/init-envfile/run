@@ -16,4 +16,7 @@ if find /run/s6/container_environment/FILE__* -maxdepth 1 > /dev/null 2>&1; then
             echo "[init-envfile] cannot find secret in $(basename ${FILENAME})"
         fi
     done
+else
+    echo "[init-envfile] No secret files found, skipping..."
 fi
+

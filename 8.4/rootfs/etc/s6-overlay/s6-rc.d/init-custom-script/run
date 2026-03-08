@@ -9,17 +9,17 @@ SCRIPTS_DIR="/custom-script-init.d"
 
 # Make sure custom init directory exists and has files in it
 if [[ -e "${SCRIPTS_DIR}" ]] && [[ -n "$(/bin/ls -A ${SCRIPTS_DIR} 2>/dev/null)" ]]; then
-    echo "[custom-script-init] Files found, executing"
+    echo "[init-custom-script Files found, executing"
     for SCRIPT in "${SCRIPTS_DIR}"/*; do
         NAME="$(basename "${SCRIPT}")"
         if [[ -f "${SCRIPT}" ]]; then
-            echo "[custom-script-init] ${NAME}: executing..."
+            echo "[init-custom-script] ${NAME}: executing..."
             /bin/bash "${SCRIPT}"
-            echo "[custom-script-init] ${NAME}: exited $?"
+            echo "[init-custom-script] ${NAME}: exited $?"
         elif [[ ! -f "${SCRIPT}" ]]; then
-            echo "[custom-script-init] ${NAME}: is not a file"
+            echo "[init-custom-script] ${NAME}: is not a file"
         fi
     done
 else
-    echo "[custom-script-init] No custom files found, skipping..."
+    echo "[init-custom-script] No custom files found, skipping..."
 fi
