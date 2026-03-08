@@ -114,15 +114,17 @@ docker run -d \
 
 ### All environemnts variables
 
-| Variable                   | Description                                       | Default Value |
-|----------------------------|---------------------------------------------------|---------------|
-| `TZ`                       | Timezone configuration                            |               |
-| `HEALTHCHECKS_NC_URL`      | Healthcheck URL for Nextcloud cron job            | `false`       |
-| `HEALTHCHECKS_PREVIEW_URL` | Healthcheck URL for Preview Generator job         | `false`       |
-| `HEALTHCHECKS_UPDATE_URL`  | Healthcheck URL for automatic updates             | `false`       |
-| `NC_EXT_UPDATE`            | Enable automatic extension updates (`true/false`) | `false`       |
-| `PUID`                     | User ID for the httpd process (www-data).         | `33`          |
-| `PGID`                     | Group ID for the httpd process (www-data).        | `33`          |
+| Variable                                                       | Description                                       | Default Value |
+|----------------------------------------------------------------|---------------------------------------------------|---------------|
+| `TZ`                                                           | Timezone configuration                            |               |
+| `HEALTHCHECKS_NC_URL` or `FILE__HEALTHCHECKS_NC_URL`           | Healthcheck URL for Nextcloud cron job            | `false`       |
+| `HEALTHCHECKS_PREVIEW_URL` or `FILE__HEALTHCHECKS_PREVIEW_URL` | Healthcheck URL for Preview Generator job         | `false`       |
+| `HEALTHCHECKS_UPDATE_URL` or `FILE__HEALTHCHECKS_UPDATE_URL`   | Healthcheck URL for automatic updates             | `false`       |
+| `NC_EXT_UPDATE`                                                | Enable automatic extension updates (`true/false`) | `false`       |
+| `PUID`                                                         | User ID for the httpd process (www-data).         | `33`          |
+| `PGID`                                                         | Group ID for the httpd process (www-data).        | `33`          |
+
+You can also use the `FILE__` prefix to load the value from a file, which allows integration with Docker [compose secrets](https://docs.docker.com/compose/how-tos/use-secrets/)
 
 ---
 
