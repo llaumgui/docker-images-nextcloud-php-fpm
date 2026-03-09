@@ -66,6 +66,7 @@ RUN set -eux; \
         git \
         gnupg \
         imagemagick \
+        libimage-exiftool-perl \
         libfcgi-bin \
         libldap-common \
         libmagickwand-7.q16-10 \
