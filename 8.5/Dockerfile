@@ -1,7 +1,7 @@
 # My php-fpm image, based on debian Linux, configured and forked from the
 # official Nextcloud docker repository.
-# @see: https://github.com/nextcloud/docker/blob/09fecda4067434c11f955cdd3000ed950fe48d04/27/fpm/Dockerfile
-FROM php:8.4-fpm-trixie
+# @see: https://github.com/nextcloud/docker/blob/master/33/fpm/Dockerfile
+FROM php:8.5-fpm-trixie
 
 
 # -------------------------------------------- Set environment and ARG variables
@@ -105,6 +105,8 @@ RUN set -eux; \
         libonig-dev\
         # Build dependancies for PostgreSQL \
         libpq-dev  \
+        # Build dependancies for Redis \
+        liblz4-dev \
         # Build dependencies for XML part \
         libxml2-dev \
         # Build dependencies for Zip \
@@ -134,7 +136,6 @@ RUN php -m; \
         intl \
         ldap \
         mbstring \
-        opcache \
         pcntl \
         pdo_pgsql \
         pgsql \
@@ -152,8 +153,8 @@ RUN php -m; \
     pecl install redis \
         --configureoptions 'enable-redis-igbinary="yes" enable-redis-zstd="yes" enable-redis-lz4="yes"'; \
     docker-php-ext-enable \
-        igbinary \
         apcu \
+        igbinary \
         imagick \
         redis; \
     rm -r /tmp/pear; \
