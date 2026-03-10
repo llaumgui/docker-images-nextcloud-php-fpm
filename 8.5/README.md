@@ -1,4 +1,4 @@
-# PHP 8.4-nextcloud (PHP-FPM) on Debian (GLibC)
+# PHP 8.5-nextcloud (PHP-FPM) on Debian (GLibC)
 
 [![Author][ico-bluesky]][link-bluesky]
 [![Build Status][ico-ghactions]][link-ghactions]
@@ -26,7 +26,7 @@
 
 ## Features
 
-- **Based on** the official PHP-FPM Debian image (`php:8.4-fpm`). Uses Debian with GLibC for [Recognize](https://github.com/nextcloud/recognize) in *native speed mode*.
+- **Based on** the official PHP-FPM Debian image (`php:8.5-fpm`). Uses Debian with GLibC for [Recognize](https://github.com/nextcloud/recognize) in *native speed mode*.
 - **Inspired by** the [official Nextcloud image](https://github.com/nextcloud/docker/blob/09fecda4067434c11f955cdd3000ed950fe48d04/27/fpm/Dockerfile) (`nextcloud:fpm`) and [LinuxServer.io](https://www.linuxserver.io/).
 - **Optimized** for better performance and reliability.
 
@@ -109,7 +109,7 @@ To run the container using the Docker CLI:
 docker run -d \
   -v /docker/volumes/www:/var/www \
   --expose 9000 \
-  llaumgui/php:8.4-nextcloud
+  llaumgui/php:8.5-nextcloud
 ```
 
 ### All environemnts variables
@@ -162,7 +162,7 @@ services:
   php:
     container_name: nextcloud_php
     hostname: nextcloud-php
-    image: ghcr.io/llaumgui/php:8.4-nextcloud-fpm
+    image: ghcr.io/llaumgui/php:8.5-nextcloud-fpm
     restart: unless-stopped
     environment:
       TZ: 'Europe/Paris'
@@ -225,7 +225,7 @@ services:
   php:
     container_name: nextcloud_php
     hostname: nextcloud-php
-    image: ghcr.io/llaumgui/php:8.4-nextcloud-fpm
+    image: ghcr.io/llaumgui/php:8.5-nextcloud-fpm
     restart: unless-stopped
     environment:
       TZ: 'Europe/Paris'
