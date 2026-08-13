@@ -22,7 +22,7 @@ jobs:
     name: Linters for Dockerfile
     steps:
     - name: Git checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     # Run hadolint
     - name: hadolint
       if: ${{ github.event.schedule == '' }}
@@ -40,7 +40,7 @@ jobs:
     name: Linters and checkstyle
     steps:
     - name: Git checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     # Run markdownlint-cli
     - name: Use markdownlint-cli2
@@ -70,7 +70,7 @@ jobs:
         php-version: ["8.4", "8.5"]
     steps:
     - name: Git checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     # Extract metadata (tags, labels) for Docker
     - name: Extract Docker metadata
@@ -124,7 +124,7 @@ jobs:
         php-version: ["8.4", "8.5"]
     steps:
     - name: Git checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     # Login against 2 Docker registries except on PR
     - name: Log in to Docker Hub
