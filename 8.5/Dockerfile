@@ -184,7 +184,8 @@ RUN sed -i 's#^;pm.status_path = .*#pm.status_path = /status#g' /usr/local/etc/p
 
 # ---------------------------------------------------------------- Configuration
 # Healthcheck
-HEALTHCHECK --interval=1m --timeout=10s --start-period=1m --retries=3 CMD FCGI_CONNECT=localhost:9000 php-fpm-healthcheck
+HEALTHCHECK --interval=1m --timeout=10s --start-period=1m --retries=3 \
+    CMD ["env", "FCGI_CONNECT=localhost:9000", "php-fpm-healthcheck"]
 
 # Patch pageres
 COPY patch /tmp
